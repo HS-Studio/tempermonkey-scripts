@@ -12,6 +12,16 @@
 (function() {
     'use strict';
 
+    document.addEventListener('keydown', function(event) {
+        if(event.key == "ArrowLeft" && event.shiftKey == true) {
+            GoFullscreen();
+            //alert('Left was pressed');
+        }
+    });
+})();
+
+function GoFullscreen()
+{
     const elem = document.documentElement;
 
     if (elem.requestFullscreen) {
@@ -23,7 +33,4 @@
     } else if (elem.webkitRequestFullscreen) {
         elem.webkitRequestFullscreen();
     }
-
-})();
-
-
+}
