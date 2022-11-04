@@ -22,7 +22,7 @@
 
 function GoFullscreen()
 {
-    const elem = document.documentElement;
+    const elem = document.body;
 
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
