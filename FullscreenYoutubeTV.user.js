@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fullscreen Youtube TV
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.1
 // @description  try to take over the world!
 // @author       SkyHacker
 // @match        https://www.youtube.com/tv
@@ -11,19 +11,17 @@
 
 (function() {
     'use strict';
-    GoFullscreen();
-    document.addEventListener('keydown', function(event) {
-        if(event.key == "ArrowLeft" && event.shiftKey == true) {
-            GoFullscreen();
-            //alert('Left was pressed');
-        }
-    });
+
+    const body = document.body;
+    const docmnt = document.documentElement;
+
+    GoFullscreen(body);
+    GoFullscreen(docmnt);
 })();
 
-function GoFullscreen()
+function GoFullscreen(elem)
 {
-    const elem = document.body;
-
+    
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
     } else if (elem.msRequestFullscreen) {
