@@ -11,7 +11,7 @@
 
 (function() {
     'use strict';
-
+    GoFullscreen();
     document.addEventListener('keydown', function(event) {
         if(event.key == "ArrowLeft" && event.shiftKey == true) {
             GoFullscreen();
