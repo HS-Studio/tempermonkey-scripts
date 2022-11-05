@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fullscreen Youtube TV
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       SkyHacker
 // @match        https://www.youtube.com/tv
