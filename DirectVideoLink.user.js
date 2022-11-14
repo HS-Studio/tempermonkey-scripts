@@ -96,13 +96,13 @@ function CreateLink(video, link, link2)
 {
     let new_link = document.createElement("div");
 
-    new_link.innerHTML = '<a id="VideoLink" style="user-select:all; z-index:999 ;position: absolute; top: 10px; left: 10px; background-color: transparent; border: 0px;" href=' + link + '><svg width="32" height="32"><circle cx="16" cy="16" r="16" fill="white" fill-opacity="0.5" /><polygon points="13,10 13,22 23,16 "style="fill:;stroke:black;stroke-width:5;fill-rule:evenodd;stroke-linejoin:round" /></svg></a>';
-    
+    new_link.innerHTML = '<a class="videolink" id="VideoLink" style="user-select:all; z-index:999 ;position: absolute; top: 10px; left: 10px; background-color: transparent; border: 0px;" href=' + link + '><svg width="32" height="32"><circle cx="16" cy="16" r="16" fill="white" fill-opacity="0.5" /><polygon points="13,10 13,22 23,16 "style="fill:;stroke:black;stroke-width:5;fill-rule:evenodd;stroke-linejoin:round" /></svg></a>';
+
     if(link2 != null)
     {
-        new_link.innerHTML += '<a id="VideoLink2" style="user-select:all; z-index:999 ;position: absolute; top: 10px; left: 50px; background-color: transparent; border: 0px;" href=' + link2 + '><svg width="32" height="32"><circle cx="16" cy="16" r="16" fill="white" fill-opacity="0.5" /><polygon points="13,10 13,22 23,16 "style="fill:;stroke:black;stroke-width:5;fill-rule:evenodd;stroke-linejoin:round" /></svg></a>';
+        new_link.innerHTML += '<a class="videolink" id="VideoLink2" style="user-select:all; z-index:999 ;position: absolute; top: 10px; left: 50px; background-color: transparent; border: 0px;" href=' + link2 + '><svg width="32" height="32"><circle cx="16" cy="16" r="16" fill="white" fill-opacity="0.5" /><polygon points="13,10 13,22 23,16 "style="fill:;stroke:black;stroke-width:5;fill-rule:evenodd;stroke-linejoin:round" /></svg></a>';
     }
-    
+
     video.parentNode.appendChild(new_link);
 }
 
@@ -110,15 +110,21 @@ function ToggleButton()
 {
     //alert(document.fullscreenElement);
 
-    let videoButton = document.getElementById('VideoLink');
+    let buttons = document.getElementsByClassName('videolink');
 
     if(document.fullscreenElement)
     {
-        videoButton.style.top = '-100px';
+        for (let i = 0; i < buttons.length; i++)
+        {
+            buttons[i].style.display = "none";
+        }
         //alert('Vollbild');
     }
     else
     {
-        videoButton.style.top = '10px';
+        for (let i = 0; i < buttons.length; i++)
+        {
+            buttons[i].style.display = "block";
+        }
     }
 }
