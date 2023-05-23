@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Direct Video Link
 // @namespace    http://tampermonkey.net/
-// @version      0.4.1
+// @version      0.4.2
 // @updateURL    https://github.com/HS-Studio/voe-video-link-temper-monkey-/raw/main/DirectVideoLink.user.js
 // @downloadURL  https://github.com/HS-Studio/voe-video-link-temper-monkey-/raw/main/DirectVideoLink.user.js
 // @description  try to take over the world!
@@ -96,11 +96,11 @@ function CreateLink(video, link, link2)
 {
     let new_link = document.createElement("div");
 
-    new_link.innerHTML = '<a class="videolink" id="VideoLink" style="user-select:all; z-index:999 ;position: absolute; top: 10px; left: 10px; background-color: transparent; border: 0px;" href=' + link + '><svg width="32" height="32"><circle cx="16" cy="16" r="16" fill="white" fill-opacity="0.5" /><polygon points="13,10 13,22 23,16 "style="fill:;stroke:black;stroke-width:5;fill-rule:evenodd;stroke-linejoin:round" /></svg></a>';
+    new_link.innerHTML = '<a class="videolink" id="VideoLink" style="user-select:all; z-index:999 ;position: absolute; top: 50px; left: 10px; background-color: transparent; border: 0px;" href=' + link + '><svg width="32" height="32"><circle cx="16" cy="16" r="16" fill="white" fill-opacity="0.5" /><polygon points="13,10 13,22 23,16 "style="fill:;stroke:black;stroke-width:5;fill-rule:evenodd;stroke-linejoin:round" /></svg></a>';
 
     if(link2 != null)
     {
-        new_link.innerHTML += '<a class="videolink" id="VideoLink2" style="user-select:all; z-index:999 ;position: absolute; top: 10px; left: 50px; background-color: transparent; border: 0px;" href=' + link2 + '><svg width="32" height="32"><circle cx="16" cy="16" r="16" fill="white" fill-opacity="0.5" /><polygon points="13,10 13,22 23,16 "style="fill:;stroke:black;stroke-width:5;fill-rule:evenodd;stroke-linejoin:round" /></svg></a>';
+        new_link.innerHTML += '<a class="videolink" id="VideoLink2" style="user-select:all; z-index:999 ;position: absolute; top: 50px; left: 50px; background-color: transparent; border: 0px;" href=' + link2 + '><svg width="32" height="32"><circle cx="16" cy="16" r="16" fill="white" fill-opacity="0.5" /><polygon points="13,10 13,22 23,16 "style="fill:;stroke:black;stroke-width:5;fill-rule:evenodd;stroke-linejoin:round" /></svg></a>';
     }
 
     video.parentNode.appendChild(new_link);
