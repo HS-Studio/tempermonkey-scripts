@@ -2,8 +2,8 @@
 // @name         Direct Video Link
 // @namespace    http://tampermonkey.net/
 // @version      0.4.2
-// @updateURL    https://github.com/HS-Studio/voe-video-link-temper-monkey-/raw/main/DirectVideoLink.user.js
-// @downloadURL  https://github.com/HS-Studio/voe-video-link-temper-monkey-/raw/main/DirectVideoLink.user.js
+// @updateURL    https://github.com/HS-Studio/tempermonkey-scripts/raw/main/DirectVideoLink.user.js
+// @downloadURL  https://github.com/HS-Studio/tempermonkey-scripts/raw/main/DirectVideoLink.user.js
 // @description  try to take over the world!
 // @author       SkyHacker
 // @match        http://*/*
