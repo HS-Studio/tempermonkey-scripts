@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Direct Video Link
 // @namespace    http://tampermonkey.net/
-// @version      0.4.3
+// @version      0.4.4
 // @updateURL    https://github.com/HS-Studio/tempermonkey-scripts/raw/main/DirectVideoLink.user.js
 // @downloadURL  https://github.com/HS-Studio/tempermonkey-scripts/raw/main/DirectVideoLink.user.js
 // @description  try to take over the world!
@@ -28,9 +28,7 @@
         }, false);
     }
 */
-    let body = document.querySelector('body');
-    body.style.userSelect = 'all';
-
+    
     let data = TryVoe();
 
     if(data.link == null)
