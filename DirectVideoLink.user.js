@@ -39,7 +39,8 @@
     if(data.link != null)
     {
         HidePlayerTitle();
-        CreateLink(data.video, data.link, data.link2);
+        //CreateLink(data.video, data.link, data.link2);
+        window.location.href = data.link;
         ToggleButton();
         document.onfullscreenchange = event => { ToggleButton() };
     }
