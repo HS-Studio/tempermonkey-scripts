@@ -97,6 +97,8 @@ async function TryStreamtape()
 
 function CreateLink(video, link, link2)
 {
+    const title = "Titel";
+    const text = "";
     let new_link = document.createElement("div");
 
     new_link.innerHTML = '<a class="videolink" id="VideoLink" style="display:block;user-select:all; z-index:99999 ;position: absolute; top: 10px; left: 10px; background-color: transparent; border: 0px;" href=' + link + '><svg width="32" height="32"><circle cx="16" cy="16" r="16" fill="white" fill-opacity="0.5" /><polygon points="13,10 13,22 23,16 "style="fill:;stroke:black;stroke-width:5;fill-rule:evenodd;stroke-linejoin:round" /></svg></a>';
@@ -107,13 +109,13 @@ function CreateLink(video, link, link2)
     }
 
     video.parentNode.appendChild(new_link);
-    btn = document.getElementById("VideoLink");
+    let btn = document.getElementById("VideoLink");
     btn.onclick = () => {
     if (navigator.share !== undefined) {
       navigator
         .share({
-          "",
-          "",
+          title,
+          text,
           link
         })
         .then(() => console.log("Shared!"))
