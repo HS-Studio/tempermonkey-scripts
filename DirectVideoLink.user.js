@@ -108,19 +108,6 @@ function CreateLink(video, link, link2)
         new_link.innerHTML += '<a class="videolink" id="VideoLink2" style="user-select:all; z-index:99999 ;position: absolute; top: 10px; left: 50px; background-color: transparent; border: 0px;" href=' + link2 + '><svg width="32" height="32"><circle cx="16" cy="16" r="16" fill="white" fill-opacity="0.5" /><polygon points="13,10 13,22 23,16 "style="fill:;stroke:black;stroke-width:5;fill-rule:evenodd;stroke-linejoin:round" /></svg></a>';
     }
 
-    new_link.firstChild.onclick = () => {
-        if (navigator.share !== undefined) {
-          navigator
-            .share({
-              title,
-              text,
-              link
-            })
-            .then(() => console.log("Shared!"))
-            .catch(err => console.error(err));
-        }
-    };
-
     video.parentNode.appendChild(new_link);
 }
 
