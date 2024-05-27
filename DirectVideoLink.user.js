@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Direct Video Link
 // @namespace    http://tampermonkey.net/
-// @version      0.4.5
+// @version      0.4.6
 // @updateURL    https://github.com/HS-Studio/tempermonkey-scripts/raw/main/DirectVideoLink.user.js
 // @downloadURL  https://github.com/HS-Studio/tempermonkey-scripts/raw/main/DirectVideoLink.user.js
 // @description  try to take over the world!
